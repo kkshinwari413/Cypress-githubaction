@@ -1,0 +1,19 @@
+name: Browser Test Build
+
+on: push
+
+jobs:
+  cypress-run:
+    runs-on: windows-latest # Change the operating system to Windows
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # Use the setup-node action to set up Node.js on Windows
+        with:
+          browser: firefox
