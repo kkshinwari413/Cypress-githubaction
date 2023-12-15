@@ -23,3 +23,6 @@ jobs:
 
       - name: Cypress run
         run: npx cypress run # Run Cypress tests with npx on Windows
+
+      - name: Cypress run on Windows
+        run: npx cypress run --browser chrome
